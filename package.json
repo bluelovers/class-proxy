@@ -1,0 +1,29 @@
+{
+  "name": "class-proxy",
+  "version": "1.0.0",
+  "description": "The Class Proxy is used to define custom behavior for fundamental operations (e.g. property lookup, assignment, enumeration, function invocation, etc).",
+  "keywords": [
+    "apply",
+    "built-in",
+    "class",
+    "global",
+    "handler",
+    "method",
+    "npm",
+    "object",
+    "prop",
+    "prototype",
+    "proxify",
+    "proxy",
+    "receiver",
+    "reference",
+    "reflect",
+    "standard"
+  ],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
