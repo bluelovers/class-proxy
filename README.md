@@ -19,9 +19,9 @@ var createClassProxy = require("class-proxy/node");
 ```
 
 ```ts
-import * as WURL from 'whatwg-url';
+import { implementation as URLImpl } from 'whatwg-url/lib/URL-impl';
 
-let URLImplProxy2 = createClassProxy(WURL.URLImpl, {
+let URLImplProxy2 = createClassProxy(URLImpl, {
 	get(target, name)
 	{
 		return target[name];
