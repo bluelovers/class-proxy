@@ -1,4 +1,7 @@
 "use strict";
+/**
+ * Created by user on 2018/2/11/011.
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
 function createClassProxy(target, handler) {
     let construct;
