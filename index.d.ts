@@ -2,6 +2,13 @@
  * Created by user on 2018/2/11/011.
  */
 export declare function createClassProxy<T>(target: createClassProxy.ClassProxyStatic<T>, handler: createClassProxy.IClassProxyHandler): createClassProxy.ClassProxyStatic<T>;
+/**
+ * try skip type check version
+ * @param target
+ * @param {IClassProxyHandler} handler
+ * @returns {T}
+ */
+export declare function createClassProxy2<T>(target: any, handler: IClassProxyHandler): T;
 export interface ClassProxyStatic<T> extends createClassProxy.ClassProxyStatic<T> {
 }
 export interface IClassProxyHandler extends createClassProxy.IClassProxyHandler {

@@ -29,9 +29,9 @@
 //    "rootDir": ".",
 //    "outDir": ".",
 
-    "paths": {
-
-    },
+//    "paths": {
+//
+//    },
 
     "traceResolution": true,
     "newLine": "lf"

@@ -28,6 +28,38 @@ export function createClassProxy<T>(target: createClassProxy.ClassProxyStatic<T>
 	});
 }
 
+/**
+ * try skip type check version
+ * @param target
+ * @param {IClassProxyHandler} handler
+ * @returns {T}
+ */
+export function createClassProxy2<T>(target, handler: IClassProxyHandler): T
+{
+	let construct;
+	if (handler.construct)
+	{
+		construct = handler.construct;
+	}
+
+	return new Proxy(target, {
+		construct(target, args)
+		{
+			let obj;
+			if (construct)
+			{
+				obj = construct(target, args);
+			}
+			else
+			{
+				obj = new target(...args);
+			}
+
+			return new Proxy(obj, handler);
+		}
+	});
+}
+
 export interface ClassProxyStatic<T> extends createClassProxy.ClassProxyStatic<T>
 {
 
