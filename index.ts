@@ -184,4 +184,7 @@ export module createClassProxy
 	}
 }
 
+createClassProxy.createClassProxy = createClassProxy;
+createClassProxy.default = createClassProxy;
+
 export default createClassProxy;

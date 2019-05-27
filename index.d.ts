@@ -1,7 +1,12 @@
 /**
  * Created by user on 2018/2/11/011.
  */
-export declare function createClassProxy<T>(target: createClassProxy.ClassProxyStatic<T>, handler: createClassProxy.IClassProxyHandler): createClassProxy.ClassProxyStatic<T>;
+declare function createClassProxy<T>(target: createClassProxy.ClassProxyStatic<T>, handler: createClassProxy.IClassProxyHandler): createClassProxy.ClassProxyStatic<T>;
+declare namespace createClassProxy {
+    var createClassProxy: typeof createClassProxy;
+    var default: typeof createClassProxy;
+}
+export default createClassProxy;
 /**
  * try skip type check version
  * @param target
@@ -44,7 +49,7 @@ export declare module createClassProxy {
             value?: boolean;
             writable?: boolean;
             get?<T>(): T;
-            set?(value): void;
+            set?(value: any): void;
             configurable?: boolean;
             enumerable?: boolean;
         };
