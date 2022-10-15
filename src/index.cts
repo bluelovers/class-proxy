@@ -4,4 +4,5 @@
 
 import { createClassProxy } from './index';
 
+// @ts-ignore
 export = createClassProxy;

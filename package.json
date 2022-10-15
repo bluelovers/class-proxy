@@ -1,6 +1,6 @@
 {
   "name": "class-proxy",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "The Class Proxy is used to define custom behavior for fundamental operations (e.g. property lookup, assignment, enumeration, function invocation, etc).",
   "keywords": [
     "apply",
@@ -39,6 +39,11 @@
       "import": "./dist/index.esm.mjs",
       "require": "./dist/index.cjs"
     },
+    "./node": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs"
+    },
     "./package.json": "./package.json",
     "./src/*": "./src/*"
   },
@@ -58,7 +63,7 @@
     "posttest": "yarn run build",
     "install:frozenLockfile": "yarn-tool install --frozen-lockfile",
     "install:resetLockfile": "yarn-tool install --reset-lockfile",
-    "build": "yarn run build:tsdx && yarn run build:dts:bundle",
+    "build": "yarn run build:tsdx && yarn run build:dts:tsc",
     "build:dts:bundle": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --inline-declare-global & echo build:dts:bundle",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "yarn run build:dts:copy && yarn run build:dts:tsc:emit && yarn run build:dts:copy",
